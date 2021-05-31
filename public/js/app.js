@@ -21,7 +21,7 @@ form.addEventListener('submit',(e)=>{
     const location = field.value
     result.textContent = 'Loading...'
 
-    const url = "http://localhost:3000/weather?address=" + location
+    const url = "/weather?address=" + location
     fetch(url).then((response)=>{
     response.json().then((data)=>{
        if(data.error)
